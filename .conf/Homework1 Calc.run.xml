@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Homework1 Calc" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="imageTag" value="homework1" />
+        <option name="containerName" value="Calc" />
+        <option name="sourceFilePath" value="Dockerfile-calc" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
