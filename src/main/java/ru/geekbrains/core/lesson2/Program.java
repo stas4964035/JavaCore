@@ -73,7 +73,7 @@ public class Program {
             System.out.print("-");
         }
         System.out.println();
-        System.out.printf("%d %d\n", aiTargetX + 1, aiTargetY + 1);
+
     }
 
     /*
@@ -94,7 +94,7 @@ public class Program {
         int x;
         int y;
         if (aiTargetY > 0 || aiTargetX > 0) {
-            System.out.println("THIS");
+
             field[aiTargetX][aiTargetY] = DOT_AI;
             aiTargetX = 0;
             aiTargetY = 0;
