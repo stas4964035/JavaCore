@@ -194,6 +194,12 @@ public class Program {
             count++;
             if (count == WIN_COUNT) return true;
         }
+        while (isCellValid(x - 1, y + 1) && field[x - 1][y + 1] == dot) {
+            x--;
+            y++;
+            count++;
+            if (count == WIN_COUNT) return true;
+        }
         if (count >= WIN_COUNT - 2 && isCellValid(x + 1, y + 1) && isCellEmpty(x + 1, y + 1)) {
             aiTargetX = x + 1;
             aiTargetY = y + 1;
