@@ -9,21 +9,21 @@ import java.util.List;
 
 public class Staff implements Iterable<Person> {
 
-    private List<Person> stuffList = new ArrayList<Person>();
+    private List<Person> staffList = new ArrayList<Person>();
 
 
     public void add(Person person) {
-        stuffList.add(person);
+        staffList.add(person);
 
     }
 
     public void sort(){
-        Collections.sort(stuffList);
+        Collections.sort(staffList);
     }
 
     @Override
     public Iterator<Person> iterator() {
-        return stuffList.listIterator();
+        return staffList.listIterator();
     }
 
 
