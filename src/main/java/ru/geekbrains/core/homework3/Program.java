@@ -1,20 +1,25 @@
 package ru.geekbrains.core.homework3;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
-        Person p1 = new Freelancer("Petr", 20, 14);
-        Person p2 = new Worker("Ivan", 21, 140);
 
 
-        ArrayList<Person> people = new ArrayList<>();
+        Staff staff = new Staff();
 
-        people.add(p1);
-        people.add(p2);
 
-        for (Person p : people) {
-            System.out.printf(p.toString());
+        staff.add(new Freelancer("Petr", 20, 14));
+        staff.add(new Worker("Ivan", 21, 1400));
+        staff.add(new Freelancer("Denis", 20, 12));
+        staff.add(new Worker("Jeka", 21, 1500));
+        staff.add(new Freelancer("Vadim", 20, 15));
+        staff.add(new Worker("Slavik", 21, 1430));
+        staff.add(new Freelancer("Miha", 20, 11));
+        staff.add(new Worker("Oleg", 21, 1490));
+        staff.sort();
+        for (Person p : staff) {
+            System.out.println(p.toString());
         }
 
 

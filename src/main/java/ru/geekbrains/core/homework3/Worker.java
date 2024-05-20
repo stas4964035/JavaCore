@@ -1,23 +1,27 @@
 package ru.geekbrains.core.homework3;
 
-public class Worker extends Person{
-    private float fixedMonthSalary;
+public class Worker extends Person {
 
-    public Worker(String name, int age, float fixedMonthSalary) {
+
+    public Worker(String name, int age) {
         super(name, age);
-        this.fixedMonthSalary = fixedMonthSalary;
     }
-    private Worker(String name, int age) {
-        this(name, age, 0);
+
+    public Worker(String name, int age, float salary) {
+        this(name, age);
+        setMonthSalary(salary);
     }
 
     @Override
-    protected float countMonthSalary() {
-        return fixedMonthSalary;
+    protected void countMonthSalary() {
+        setMonthSalary(getMonthSalary());
     }
+
+
+
 
     @Override
     public String toString() {
-        return String.format("%s\nPost: Worker\nMonth Salary: %f\n", super.toString(), countMonthSalary());
+        return String.format("%s\nPost: Worker\nMonth Salary: %f\n", super.toString(), getMonthSalary());
     }
 }
