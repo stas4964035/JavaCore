@@ -11,11 +11,11 @@ public class Program {
 
 //            a1.deposit(-100); // Исключение IllegalArgumentException
             a1.deposit(100);
-//            a1.withdraw(500); // Исключение InsufficientFundsException
+            a1.withdraw(500); // Исключение InsufficientFundsException
             a1.withdraw(100);
             System.out.println(a1);
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }
